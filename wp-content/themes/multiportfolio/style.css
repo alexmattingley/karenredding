@@ -244,14 +244,10 @@ mimic vh without actually using it since it doesnt work in mac
 	}
 }
 
-@media (min-width: 1030px) {
-	.hero-banner {
-		background-attachment: fixed;
-	}
-}
-
 @media (min-width: 1200px) {
-
+	.hero-banner {
+		background-position: initial;
+	}
 	.hero-banner img {
 		max-width: 450px;
 
