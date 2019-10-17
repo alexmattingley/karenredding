@@ -1,0 +1,959 @@
+/*
+Theme Name: Portfolio for Karen K Redding
+Theme URI: http://karenkreddingphd.com/ (I think!)
+Description: A custom wordpress theme for Karen K Redding, built by Alex Mattingley Designed by Lucia Ferreira Litowtschenko!
+Author: Alex Mattingley Master Dev'er / Lucia Master Designer
+Version: 1.0
+Tags: clean, light, responsive, Three Column, simple.
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+*/
+
+
+/***********************
+Overall Styles
+*************************/
+
+ul li {
+	list-style: none;
+}
+
+.container {
+	padding: 20px;
+}
+
+.shorter-container {
+	width: 95%;
+	margin:0px auto;
+	padding: 20px 0px;
+	
+}
+
+@media (min-width: 768px) {
+	.shorter-container {
+		width: 85%;
+		padding: 50px 0px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		padding: 20px 40px;
+	}
+
+	.shorter-container {
+		width: 90%;
+		margin: 0px auto;
+		
+	}
+}
+
+@media (min-width: 1600px) {
+
+	.shorter-container {
+		width: 80%;
+		margin: 0px auto;
+	}
+}
+
+/**************************
+Typography
+**************************/
+	
+	body {
+		font-family: 'Hind', sans-serif;
+	}
+
+	p, a, li {
+		font-size: 18px;
+		text-decoration: none;
+
+	}
+
+	a {
+		color: #E5713B;
+	}
+
+	h2, h3, h4, h5 {
+		text-transform: uppercase;
+		font-family: 'Droid Serif', serif;
+		font-weight: 400;
+	}
+
+	h2 {
+		font-size: 32px;
+	}
+
+	h1 {
+		font-family: 'IM Fell English', serif;
+		font-weight: normal;
+		color: #1F271B;
+	}
+	.btn {
+		padding: 10px;
+	}
+
+
+/***********************
+Header Styles
+*************************/
+header {
+	background: #E5713B;
+	padding-top: 20px;
+}
+
+nav {
+	width: 80%;
+	margin: auto;
+}
+
+header h1 {
+	width: 80%;
+	margin: 0px auto;
+	text-align: center;
+}
+.navigation li {
+	padding: 15px 0px;
+	text-align: center;
+	margin: 8px auto;
+	border: solid white 2px;
+}
+
+.navigation {
+	padding-left: 0px;
+}
+
+.navigation li a {
+	color: white;
+	width: 100%;
+	display: block;
+}
+
+.navigation li:hover {
+	border-color: #4B7471;
+}
+
+.navigation a:hover {
+	color: #4B7471;
+}
+
+.menu {
+	padding-left: 0px;
+}
+
+@media screen and (min-width: 820px)  {
+
+	header {
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	header h1 {
+		float: left;
+		width: auto;
+	}
+
+	.navigation {
+		max-width: 100%;
+		width: auto;
+		padding: 0px;
+		margin-bottom: 20px;
+		margin-top: 13px;
+	}
+
+	nav {
+		float:right;
+		width: 62%;
+		max-width: 90%;
+		text-align: right;
+	}
+	.navigation li {
+		display: inline-block;
+		width: auto;
+		border-top: none;
+		border-bottom: none;
+		border-left: none;
+		border-right: 2px solid white;
+		margin: auto;
+		padding: 0px 1%;
+	}
+
+	.navigation li:last-child {
+		border: none;
+	}
+	.navigation li a {
+		padding: 0px;
+	}
+	
+}
+@media screen and (min-width: 1024px)  {
+	.navigation {
+		margin-top: 5px;
+	}
+
+	.navigation li {
+		padding: 5px 3%;
+	}
+}
+
+
+/*****************
+HomePage/hero banner
+
+A NOTE: Hero banner height set by javascript. This is done because I wanted to
+mimic vh without actually using it since it doesnt work in mac
+****************/
+
+.hero-banner {
+	background: url("static-images/karen_dog.jpg");
+	background-size: cover;
+	position: relative;
+	box-sizing: border-box;
+}
+
+
+
+.hero-banner img {
+	max-width: 250px;
+	position: absolute;
+	bottom: 10px;
+	right: 0;
+
+}
+
+@media (min-width:520px) {
+
+	.hero-banner img {
+		max-width: 250px;
+		position: absolute;
+		top: 50%;
+		margin-top: -43px;
+		right: 0;
+		background-position: bottom;
+
+	}
+}
+
+@media (min-width: 768px) {
+	.hero-banner img {
+		max-width: 350px;
+
+	}
+}
+
+@media (min-width: 1030px) {
+	.hero-banner {
+		background-attachment: fixed;
+	}
+}
+
+@media (min-width: 1200px) {
+
+	.hero-banner img {
+		max-width: 450px;
+
+	}
+}
+
+/***********************
+signup-cta
+*************************/
+
+.signup-cta {
+	background: #8A716A;
+	color: white;
+}
+
+#mc_embed_signup .mc-field-group {
+	display: inline-block;
+	width: 47.3%;
+	margin: 10px 2% 10px 0%;
+}
+
+#mc_embed_signup .mc-field-group input {
+	display: inline-block;
+	color: black;
+	width: 100%;
+	border: none;
+	padding: 5px;
+	box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+	color: #8A716A;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #8A716A;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: #8A716A;
+}
+
+:-ms-input-placeholder {
+	color: #8A716A;
+}
+
+#mc_embed_signup button {
+	width: 98%;
+	background-color: #E5713B;
+	color: white;
+	border: 1px solid white;
+	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+	.text-cta {
+		float: left;
+		width: 30%;
+	}
+
+	.text-cta p {
+		margin-top: 10px;
+	}
+
+	#mc_embed_signup {
+		float: right;
+		width: 60%;
+	}
+
+	#mc_embed_signup .mc-field-group {
+		width: 33%;
+	}
+
+	#mc_embed_signup button {
+		width: 25%;
+		display: inline-block;
+	}
+}
+
+/***********************
+Contact Us Page
+*************************/
+.contact-us-content {
+	background: #F0E9A2;
+}
+
+.contact-us-content h2 {
+	color: #1F271B;
+}
+
+.contact-us-content {
+	padding: 40px 0px;
+}
+
+.contact-form {
+	max-width: 90%;
+	padding: 20px 0px;
+	margin: 0 auto;
+
+}
+.contact-form input, .contact-form textarea {
+	width: 100%;
+}
+.contact-us-message {
+	max-width: 90%;
+	margin: auto;
+	padding: 40px 0px;
+}
+
+@media screen and (min-width: 765px) {
+
+	.contact-form {
+		float: left;
+		width: 45%;
+		clear: both;
+		padding: 0px;
+	}
+	.contact-us-message {
+		width: 45%;
+		float: right;
+		padding: 0px;
+	}
+}
+@media screen and (min-width: 1064px) {
+
+	.contact-us-content {
+		padding: 60px 0px;
+	}
+
+	.contact-form , .contact-us-message{
+		width: 40%;
+	}
+}
+
+
+/***********************
+About Home Block
+*************************/
+
+.about-home-block h2 {
+	color: #1F271B;
+	font-size: 22px;
+}
+
+.about-home-block img {
+	display: block;
+	border-radius: 100%;
+	width: 263px;
+	height: 263px;
+	margin: 0px auto;
+}
+@media screen and (min-width: 768px) {
+
+	.about-home-block img {
+		float: right;
+		margin: 15px;
+	}
+
+}
+@media screen and (min-width: 1024px)  {
+	.about-home-block img {
+		margin: 0px 0px 15px 30px;
+		width: 33%;
+		height: auto;
+
+	}
+}
+
+@media screen and (min-width: 1200px)  {
+	.about-home-block img {
+		margin: 0px 0px 15px 30px;
+		width: 25%;
+		height: auto;
+
+	}
+}
+
+@media (min-width: 1600px) {
+	.about-home-block img {
+		margin: 0px 0px 15px 50px;
+		width: 25%;
+		height: auto;
+
+	}
+}
+
+
+/******************************
+Simple Page
+******************************/
+.simple-page {
+	background: #F0E9A2;
+	padding: 40px 0px;
+}
+
+.simple-page-container {
+	width: 90%;
+	margin: auto;
+	padding: 20px;
+	background: #FFFBF3;
+	box-sizing: border-box;
+}
+
+.simple-page img.featured-img {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+}
+.simple-page p {
+	text-align: left;
+}
+.simple-page h2 {
+	margin: 0px 0px 40px 0px;
+	color: #1F271B;
+}
+	@media screen and (min-width: 768px) {
+		.simple-page img.featured-img {
+			width: 40%;
+			float: left;
+			margin: 0% 3% 3% 0%;
+		}	
+	}
+	@media screen and (min-width: 1024px) {
+		.simple-page {
+			padding: 60px 0px;
+		}
+
+		.simple-page-container {
+			width: 70%;
+			padding: 40px;
+			max-width: 1200px;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+
+	}
+
+
+
+/***********************
+Front Page (what I do block)
+*************************/
+
+.what-i-do {
+	background: #F0E9A2;
+	text-align: center;
+	margin: auto;
+}
+.what-i-do li a {
+	color: #1F271B;
+	text-transform: uppercase;
+}
+
+.what-i-do li a:hover {
+	color: #4B7471;
+}
+.what-i-do img {
+	display: block;
+	width: 263px;
+	height: 263px;
+	margin: auto;
+	border-radius: 100%;
+}
+
+@media screen and (min-width: 1024px)  {
+	.what-i-do li {
+		display: inline-block;
+		width: 33%;
+	}
+
+}
+
+
+/*Better solution*/
+@media screen and (min-width: 1200px) {
+	.what-i-do li.left-block img {
+		margin-left: 0px;
+	}
+
+	.what-i-do li.left-block h2 {
+		text-align: left;
+	}
+
+	.what-i-do li.right-block img {
+		margin-right: 0px;
+	}
+
+	.what-i-do li.right-block h2 {
+		text-align: right;
+	}
+}
+
+		/***********************
+		What I Do Base Page
+		*************************/
+		.what-i-do-desc-base {
+			background: #FFFBF3;
+			padding: 60px 15px;
+			text-align: left;
+		}
+		.what-i-do-desc-base h2 {
+			color: #4B7471;
+			margin: 0px 0px 60px 0px;
+			text-align: left;
+		}
+		.what-i-do-desc-base h3 {
+			color: #a2815e;
+			text-align: center;
+		}
+
+		.individual-box:hover h3 {
+			color: #4B7471;
+		}
+		.individual-box p {
+			text-align: left;
+			color: black;
+		}
+		.individual-box {
+			padding: 20px 15px 40px 15px;
+			margin: 30px auto;
+			vertical-align: top;
+		}
+		.what-i-do-desc-base img.featured-img {
+			display: block;
+			width: 98%;
+			margin: 0 auto;
+			border-radius: 100%;
+		}
+		.what-i-do-desc p, .what-i-do-desc h3 {
+			margin: 40px auto;
+			width: 98%;
+		}
+
+			@media screen and (min-width: 480px)  {
+				.individual-box {
+					display: block;
+					padding: 40px 50px;
+					margin-top: 0px;
+				}
+				.container-tri-box {
+					width: 80%;
+					margin: auto;
+				}
+			}
+			@media screen and (min-width: 680px) {
+				.container-tri-box {
+					width: 70%
+				}
+			}
+			@media screen and (min-width: 960px)  {
+				.container-tri-box {
+					width: 900px;
+				}
+				.left-box, .middle-box {
+					margin-right: 1%;
+				}
+				.individual-box {
+					width: 23.4%;
+					display: inline-block;
+					padding: 40px;
+				}
+			
+			}
+			@media screen and (min-width: 1300px)  {
+				.container-tri-box {
+					width: 1200px;
+				}
+				.what-i-do-desc-base {
+					padding: 60px 0px;
+				}
+				.individual-box {
+					width: 27%;
+					display: inline-block;
+					padding: 20px;
+				}
+				.left-box, .middle-box {
+					margin-right: 3%;
+				}
+			}
+		
+
+		/**********************
+		Individual What I Do Pages (mindfullness/psychotherapy/photography)
+		************************/
+		.what-i-do-desc {
+			background: #F0E9A2;
+			padding: 60px 15px;
+			text-align: left;
+		}
+		.what-i-do-desc h2 {
+			color: #1F271B;
+			margin: 0px 0px 60px 0px;
+			text-align: left;
+		}
+		.what-i-do-desc h3 {
+			color: #8A716A;
+		}
+		.individual-desc-block p {
+			text-align: left;
+		}
+		.brown-on-brown {
+			color: white;
+			background: #E5713B;
+		}
+		.brown-on-brown:hover {
+			background-color: #8A716A;
+		}
+		.individual-desc-block {
+			background: white;
+			padding: 20px 15px 40px 15px;
+			margin: 30px auto;
+			vertical-align: top;
+		}
+		.what-i-do-desc img.featured-img {
+			display: block;
+			width: 98%;
+			margin: 0 auto;
+		}
+		.what-i-do-desc p, .what-i-do-desc h3 {
+			margin: 40px auto;
+			width: 98%;
+		}
+
+			@media screen and (min-width: 920px)  {
+				.individual-desc-block {
+					display: inline-block;
+					width: 44%;
+					margin-top: 0px;
+					height: auto;
+				}
+				.left-col {
+					margin-right: 2%;
+				}
+				.desc-container {
+					max-width: 920px;
+					margin: 0 auto;
+				}
+			}
+			@media screen and (min-width: 1024px)  {
+				.individual-desc-block {
+					height: auto;
+					width: 44.5%;
+				}
+				.desc-container {
+					max-width: 1000px;
+					margin: 0 auto;
+				}
+				.what-i-do-desc p {
+					margin: 60px auto;
+				}
+			}
+			@media screen and (min-width: 2000px)  {
+				.individual-desc-block {
+					width: 45%;
+				}
+				.desc-container {
+					max-width: 1200px;
+				}
+			}
+			/***********************
+			What I Do Individual Photo pages
+			*************************/
+			.photo-page {
+				background: #FFFBF3;
+				padding: 40px 20px;
+				margin: auto;
+			}
+
+
+
+			.photo-page h2 {
+				color: #E5713B;
+				font-size: 32px;
+			}
+			.photo-page h4 {
+				color: #4B7471;
+			}
+			.photo-page p {
+				text-align: left;
+				width: 100%;
+				margin: 20px auto;
+			}
+
+			.photo-page img {
+				text-align: center;
+				margin: 10px auto;
+				width: 100%;
+				height: auto;
+			}
+
+			.photo-page .desc-container {
+				max-width: 648px;
+			}
+
+			.blog-content{
+				margin: 20px auto;
+			}
+				@media screen and (min-width: 680px) {
+					.photo-page {
+						padding: 40px 60px;
+					}
+				}
+				@media screen and (min-width: 768px) {
+					.photo-page {
+						padding: 80px 20%;
+					}
+				}
+				@media screen and (min-width: 1064px) {
+
+					.blog-content {
+						margin: 40px auto 60px auto;
+					}
+				}
+
+/***********************
+Blog Page
+*************************/
+.blog-feed {
+	background: #F0E9A2;
+	padding: 40px 0px;
+}
+
+.blog-post {
+	background: #FFFBF3;
+	text-align: center;
+	padding: 40px 0px;
+}
+.blog-post a {
+	display: inline-block;
+	margin: auto;
+	width: 100%;
+	font-weight: 700;
+}
+
+.blog-post a:hover {
+	color: #4B7471;
+}
+
+
+.blog-post h2 a {
+	color: #E5713B;
+	font-size: 32px;
+}
+.blog-post h4 {
+	color: #4B7471;
+}
+.blog-post p {
+	text-align: left;
+	margin: 20px auto;
+}
+
+.blog-post img {
+	text-align: center;
+	margin: 60px auto;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+
+.blog-content{
+	margin: 20px auto;
+}
+	@media screen and (min-width: 680px) {
+		.blog-content {
+			margin: 40px auto;
+		}
+	}
+
+	@media screen and (min-width: 1064px) {
+
+		.blog-feed {
+			padding: 60px 0px;
+		}
+		.blog-content {
+			margin: 40px auto 60px auto;
+		}
+	}
+
+/**********************
+blog individual pages
+***********************/
+
+.blog-indiv {
+	background: #F0E9A2;
+	padding: 40px 0px;
+}
+
+.blog-indiv h3 {
+	color: #E5713B;
+	font-size: 32px;
+}
+
+.blog-indiv img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.blog-indiv .figure {
+	text-align: center;
+}
+
+.blog-info {
+	color: #8A716A;
+}
+
+/***********************
+Footer - alot of the styles here are in the header section
+*************************/
+footer {
+	background: #E5713B;
+	padding: 20px 0px;
+}
+
+.footer-nav {
+	width: 80%;
+	margin: auto;
+}
+
+.footer-nav li {
+	padding: 15px 0px;
+	text-align: center;
+	margin: 8px auto;
+	border: solid white 2px;
+}
+
+.footer-nav {
+	padding-left: 0px;
+}
+
+.footer-nav li a {
+	color: white;
+	width: 100%;
+	display: block;
+}
+
+.footer-nav li:hover {
+	border-color: #4B7471;
+}
+
+.footer-nav a:hover {
+	color: #4B7471;
+}
+
+.menu {
+	padding-left: 0px;
+}
+
+.menu li:last-child {
+	margin-bottom: 0px;
+}
+
+@media screen and (min-width: 820px)  {
+
+	footer {
+		padding: 20px;
+		box-sizing: border-box;
+	}
+
+	.footer-nav {
+		max-width: 100%;
+		width: auto;
+		padding: 0px;
+		margin-bottom: 20px;
+		margin-top: 13px;
+		text-align: center;
+	}
+
+	.footer-nav li {
+		display: inline-block;
+		width: auto;
+		border: none;
+		margin: auto;
+		padding: 0px 2%;
+	}
+
+	.footer-nav li a {
+		padding: 0px;
+	}
+
+}
+
+@media screen and (min-width: 1024px) {
+	.footer-nav li {
+		padding: 0% 4%;
+	}
+}
+
+/***********************
+Clearfix hack
+*************************/
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+
+
