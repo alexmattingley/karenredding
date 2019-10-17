@@ -28,7 +28,7 @@ ul li {
 	width: 95%;
 	margin:0px auto;
 	padding: 20px 0px;
-	
+
 }
 
 @media (min-width: 768px) {
@@ -46,7 +46,7 @@ ul li {
 	.shorter-container {
 		width: 90%;
 		margin: 0px auto;
-		
+
 	}
 }
 
@@ -61,7 +61,7 @@ ul li {
 /**************************
 Typography
 **************************/
-	
+
 	body {
 		font-family: 'Hind', sans-serif;
 	}
@@ -186,7 +186,7 @@ header h1 {
 	.navigation li a {
 		padding: 0px;
 	}
-	
+
 }
 @media screen and (min-width: 1024px)  {
 	.navigation {
@@ -207,8 +207,9 @@ mimic vh without actually using it since it doesnt work in mac
 ****************/
 
 .hero-banner {
-	background: url("static-images/karen_dog.jpg");
+	background: url("static-images/lotus4-min.jpg");
 	background-size: cover;
+	background-position: center;
 	position: relative;
 	box-sizing: border-box;
 }
@@ -472,7 +473,7 @@ Simple Page
 			width: 40%;
 			float: left;
 			margin: 0% 3% 3% 0%;
-		}	
+		}
 	}
 	@media screen and (min-width: 1024px) {
 		.simple-page {
@@ -614,7 +615,7 @@ Front Page (what I do block)
 					display: inline-block;
 					padding: 40px;
 				}
-			
+
 			}
 			@media screen and (min-width: 1300px)  {
 				.container-tri-box {
@@ -632,7 +633,7 @@ Front Page (what I do block)
 					margin-right: 3%;
 				}
 			}
-		
+
 
 		/**********************
 		Individual What I Do Pages (mindfullness/psychotherapy/photography)
@@ -950,10 +951,3 @@ Clearfix hack
   display: table;
   clear: both;
 }
-
-
-
-
-
-
-
